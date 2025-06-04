@@ -1,0 +1,9 @@
+smolagents
+huggingface_hub
+python-dotenv
+duckduckgo-search
+transformers
+torch
+Pillow
+
+
