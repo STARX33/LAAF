@@ -1,6 +1,6 @@
 # 🧠 Local Agentic AI Framework (LAAF)
 
-A modular, privacy-first agentic AI framework designed to run fully **offline**, enabling users to build adaptable, context-aware assistants using **SmolAgents**, **local LLaMA 3 (via Ollama)**, and plug-and-play tools for vision, OCR, TTS, and RAG.
+A modular, privacy first agentic AI framework designed to run fully **offline**, enabling users to build adaptable, context aware assistants using **SmolAgents**, **local LLaMA 3 (via Ollama)**, and plug and play tools for vision, OCR, TTS, and RAG.
 
 ---
 
@@ -78,7 +78,6 @@ LAAF/
 ├── vision_tools.py          # Vision tools: BLIP, OWL-ViT
 ├── requirements.txt
 ├── README.md
-├── .env
 ├── rag/
 │   ├── images/              # Reference image folders
 │   │   └── Folder_1/
@@ -105,6 +104,38 @@ ollama run llama3
 ```bash
 python main.py
 ```
+
+---
+
+## 🔐 Environment Setup
+
+To use certain features (like downloading Hugging Face-hosted models via `smolagents`), you’ll need a Hugging Face API token:
+
+### Step-by-Step
+
+1. **Create a Token**  
+   Go to [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) and generate a new token.
+
+2. **Set Your Token Locally**  
+   You can either export it in your terminal or create a local `.env` file:
+
+   **Unix/Mac:**
+   ```bash
+   export HUGGINGFACE_TOKEN=your_token_here
+   ```
+
+   **Windows (PowerShell):**
+   ```powershell
+   $env:HUGGINGFACE_TOKEN="your_token_here"
+   ```
+
+   Or create a local `.env` file (not tracked in Git):
+   ```env
+   HUGGINGFACE_TOKEN=your_token_here
+   ```
+
+3. **(Optional)**  
+   If your system loads `.env` automatically (e.g. via `dotenv`), you’re good to go. If not, just make sure the token is exported in your terminal session.
 
 ---
 
@@ -152,7 +183,7 @@ LAAF extends that foundation with:
 - BLIP / OWL-ViT vision tools
 - Offline-first, modular architecture
 
-Massive thanks to the Hugging Face team for open-sourcing the core tools and ideas.
+Massive thanks to the Hugging Face team for open sourcing the core tools and ideas.
 
 ---
 
