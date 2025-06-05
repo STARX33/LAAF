@@ -141,7 +141,7 @@ To use certain features (like downloading Hugging Face-hosted models via `smolag
 
 ---
 
-## 📚 RAG (Retrieval-Augmented Generation)
+## 📚 RAG (Retrieval Augmented Generation)
 
 Structure your own data references:
 
