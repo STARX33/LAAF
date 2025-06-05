@@ -6,7 +6,9 @@ A modular, privacy first agentic AI framework designed to run fully **offline**,
 
 ## 🚀 Project Vision
 
-This framework is a shift from traditional UI/UX into the new frontier of **Agentic Experience (AX)** — where intelligent agents interact with context, not static interfaces.
+LAAF is not here to replace UI/UX — it’s the first step toward building a new paradigm: **Agentic Experience (AX)**.
+AX is about working *with* intelligent agents who can see what you see, read what you read, and assist with daily or domain specific tasks — not just chat. Think of it as the groundwork for agents that can help fill out forms, interpret dashboards, summarize reports, or provide accessibility support — all **running privately, locally, and modularly.**
+LAAF enables this future by combining local LLaMA 3, lightweight toolchains, and modular context injection (RAG) — giving developers full control to prototype and build agentic workflows that **go beyond conversation**.
 
 It’s designed for:
 - Developers building **domain-specific AI assistants**
