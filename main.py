@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from smolagents import CodeAgent, DuckDuckGoSearchTool
+from smolagents import CodeAgent
 from tools import suggest_menu
 from vision_tools import (
     detect_objects_from_latest_image,
@@ -25,7 +25,6 @@ else:
 # Create Alfred agent with local Ollama model
 agent = CodeAgent(
     tools=[
-        DuckDuckGoSearchTool(),
         suggest_menu,
         detect_objects_from_latest_image,
         detect_items_with_owlvit,
