@@ -16,6 +16,7 @@ It’s designed for:
 - Accessibility advocates supporting **visually impaired users**
 - Engineers experimenting with **image + text-based RAG**
 - Anyone wanting to **run agentic AI fully locally**
+- HIPPA compliant applications in **legal, medical, and business domains**
 
 ---
 
