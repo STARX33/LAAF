@@ -1,6 +1,7 @@
+
 # 🧠 Local Agentic AI Framework (LAAF)
 
-A modular, privacy first agentic AI framework designed to run fully **offline**, enabling users to build adaptable, context aware assistants using **SmolAgents**, **local LLaMA 3 (via Ollama)**, and plug and play tools for vision, OCR, TTS, and RAG.
+A modular, privacy first agentic AI framework designed to run fully **offline**, enabling users to build adaptable, context aware assistants using **a customized agent loop inspired by SmolAgents**, **local LLaMA 3 (via Ollama)**, and plug and play tools for vision, OCR, TTS, and RAG.
 
 ---
 
@@ -21,13 +22,13 @@ It’s designed for:
 ## 🧩 Key Features
 
 - 🤖 **Local LLaMA 3 via Ollama**  
-  Seamlessly integrated with SmolAgents for smart, prompt-aware behavior.
+  Seamlessly integrated with our custom agent loop for smart, prompt aware behavior.
 
 - 🖼️ **Screenshot-Based Visual Input**  
-  Instead of heavy video processing, users can request help and trigger on-the-spot screenshots.
+  Instead of heavy video processing, users can request help and trigger on the  spot screenshots.
 
-- 🧾 **Optional OCR & TTS Modules**  
-  For reading and voicing visual/text content—great for accessibility.
+- 🧾 **Optional OCR & TTS Modules (Offline)**  
+  For reading and voicing visual/text content—great for accessibility. Powered by local engines such as **Tesseract** (OCR) and **pyttsx3** or **Coqui TTS** (TTS).
 
 - 🗂️ **RAG Folders for Context Injection**  
   Users can drop documents, images, and more into structured folders to inject real-time knowledge into the AI’s reasoning.
@@ -111,33 +112,15 @@ python main.py
 
 ## 🔐 Environment Setup
 
-To use certain features (like downloading Hugging Face-hosted models via `smolagents`), you’ll need a Hugging Face API token:
+LAAF is designed to run fully offline. No external tokens or APIs are required by default.
 
-### Step-by-Step
-
-1. **Create a Token**  
-   Go to [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) and generate a new token.
-
-2. **Set Your Token Locally**  
-   You can either export it in your terminal or create a local `.env` file:
-
-   **Unix/Mac:**
-   ```bash
-   export HUGGINGFACE_TOKEN=your_token_here
-   ```
-
-   **Windows (PowerShell):**
-   ```powershell
-   $env:HUGGINGFACE_TOKEN="your_token_here"
-   ```
-
-   Or create a local `.env` file (not tracked in Git):
-   ```env
-   HUGGINGFACE_TOKEN=your_token_here
-   ```
-
-3. **(Optional)**  
-   If your system loads `.env` automatically (e.g. via `dotenv`), you’re good to go. If not, just make sure the token is exported in your terminal session.
+If you'd like to configure optional features, create a `.env` file with flags:
+```env
+USE_OCR=true
+USE_TTS=true
+RAG_MODE=full
+```
+These can also be passed through CLI arguments or config settings depending on your implementation.
 
 ---
 
@@ -156,7 +139,7 @@ If folders are empty, the system still runs — just with less context.
 
 ## ♿ Accessibility Mode (Optional)
 
-Enable via config or manual flag:
+Enable via config or `.env` flags:
 ```yaml
 use_ocr: true
 use_tts: true
@@ -166,7 +149,7 @@ use_tts: true
 
 ## 🔬 Testing Scenarios
 
-- ✅ **No RAG:** Should fall back to image-only reasoning
+- ✅ **No RAG:** Should fall back to image only reasoning
 - ✅ **Text RAG only:** Inject `.txt` memory like "This is a robot disguised as a dog."
 - ✅ **Image RAG only:** Drop `robot_dog.jpg` — expect image captioning to enhance inference
 - ✅ **Full RAG:** Combine image + text context for deepest analysis
@@ -185,7 +168,9 @@ LAAF extends that foundation with:
 - BLIP / OWL-ViT vision tools
 - Offline-first, modular architecture
 
-Massive thanks to the Hugging Face team for open sourcing the core tools and ideas.
+We have departed from the original `smolagents` library to build our own modular agent loop that operates fully offline, locally, and securely without needing Hugging Face tokens or hosted APIs.
+
+Massive thanks to the Hugging Face team for open sourcing the core ideas.
 
 ---
 
