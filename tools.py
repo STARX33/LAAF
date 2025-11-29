@@ -23,3 +23,17 @@ def suggest_menu(occasion: str) -> str:
         return "Buffet with high-energy and healthy food."
     else:
         return "Custom menu curated by Alfred the butler."
+
+@tool
+def final_answer(answer: str) -> str:
+    """
+    Provides the final answer to end the task.
+
+    Args:
+        answer: The final answer or conclusion.
+
+    Returns:
+        The final answer formatted for completion.
+    """
+    print(f"FINAL ANSWER: {answer}")
+    return f"Final Answer: {answer}"

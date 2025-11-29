@@ -1,9 +1,22 @@
-smolagents
-huggingface_hub
-python-dotenv
-duckduckgo-search
-transformers
-torch
-Pillow
+# Core Dependencies
+smolagents>=1.17.0
+huggingface-hub>=0.20.0
+python-dotenv>=1.0.0
 
+# Vision & Image Processing
+transformers>=4.30.0
+torch>=2.0.0
+Pillow>=10.0.0
 
+# HTTP/API Communication
+requests>=2.31.0
+
+# Optional: For web search tools (if enabled)
+duckduckgo-search>=5.0.0
+
+# Note: Ollama must be installed separately
+# Installation: https://ollama.ai/
+# Quick start:
+#   1. Install Ollama from https://ollama.ai/
+#   2. Pull a model: ollama pull qwen2:7b
+#   3. Run: python main.py
