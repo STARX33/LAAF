@@ -8,14 +8,30 @@ transformers>=4.30.0
 torch>=2.0.0
 Pillow>=10.0.0
 
+# OCR & Document Processing
+pytesseract>=0.3.10
+pdf2image>=1.16.0
+pypdf>=4.0.0
+pdfplumber>=0.10.0
+
 # HTTP/API Communication
 requests>=2.31.0
 
 # Optional: For web search tools (if enabled)
 duckduckgo-search>=5.0.0
 
-# Note: Ollama must be installed separately
-# Installation: https://ollama.ai/
+# Note: Additional system requirements:
+# - Tesseract OCR engine must be installed separately
+#   Windows: https://github.com/UB-Mannheim/tesseract/wiki
+#   Linux: sudo apt-get install tesseract-ocr
+#   Mac: brew install tesseract
+#
+# - Poppler for pdf2image (PDF to image conversion)
+#   Windows: Download from https://github.com/oschwartz10612/poppler-windows/releases
+#   Linux: sudo apt-get install poppler-utils
+#   Mac: brew install poppler
+#
+# Ollama installation: https://ollama.ai/
 # Quick start:
 #   1. Install Ollama from https://ollama.ai/
 #   2. Pull a model: ollama pull qwen2:7b

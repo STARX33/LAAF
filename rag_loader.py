@@ -10,6 +10,18 @@ def _load_text_rag_context_impl(rag_path: str = "rag/text") -> str:
     """Implementation of text RAG context loading."""
     context_blocks = []
 
+    # Load files from root directory first (e.g., system_guardrails.txt)
+    for file in os.listdir(rag_path):
+        file_path = os.path.join(rag_path, file)
+        if os.path.isfile(file_path) and file.endswith((".txt", ".md", ".csv")):
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                    context_blocks.append(f"\n\n---\n# From: {file}\n{content}")
+            except Exception as e:
+                print(f"[RAG/Text] Error loading {file_path}: {e}")
+
+    # Then load from subdirectories
     for folder in os.listdir(rag_path):
         folder_path = os.path.join(rag_path, folder)
         if not os.path.isdir(folder_path):

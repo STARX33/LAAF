@@ -1,0 +1,34 @@
+EPISODIC MEMORY - DOMAIN KNOWLEDGE
+
+Definition:
+Episodic memory is the autobiographical recall of specific past events,
+including the associated time, place, and emotions.
+
+Core Components (What vs. When vs. Where vs. Why):
+- WHAT: Specific events, experiences, interactions
+- WHEN: Temporal markers (dates, times, sequences, "yesterday at 3pm")
+- WHERE: Spatial context (locations, environments, "in the living room")
+- WHY: Emotional significance (feelings, importance, impact)
+
+Memory Types (for context):
+1. Episodic Memory: Personal experiences with context
+   - Example: "I remember analyzing the episodic memory PDF on November 29th"
+
+2. Semantic Memory: General knowledge without context
+   - Example: "Episodic memory is a type of long-term memory"
+
+3. Procedural Memory: Skills and habits
+   - Example: "Knowing how to extract text from PDFs"
+
+Key Characteristics:
+- Autobiographical: Personal to the individual
+- Contextual: Rich in temporal and spatial details
+- Emotionally charged: Often involves feelings
+- Reconstructive: Can be recalled and reflected upon
+- Associative: Triggered by cues (smells, sounds, keywords)
+
+Relevance to This System:
+Alfred stores interactions as episodic memories, capturing not just WHAT
+was analyzed, but WHEN it happened, WHERE files were located, and WHY
+the user cared about it. This enables richer recall and better context
+for future interactions.
