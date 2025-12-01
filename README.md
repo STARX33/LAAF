@@ -426,7 +426,7 @@ MIT License — free and open source with attribution.
 
 ## 🗺️ Roadmap
 
-LAAF follows the **Chris Sawyer Philosophy**: start simple, evolve deliberately, never over-engineer.
+LAAF follows the start simple, evolve deliberately, never over engineer.
 
 | Phase | Status | Description |
 |-------|--------|-------------|
